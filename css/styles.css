@@ -259,6 +259,7 @@ ul {
   height: 100%;
   left: 0;
   top: 0;
+  background: rgba(47, 48, 58, 0.4);
 }
 
 .backdrop.is-hidden {
