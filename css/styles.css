@@ -278,6 +278,26 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.modal-button {
+  fill: #000000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal-icon {
+  width: 11px;
+  height: 11px;
 }
 
 /* <!-- company advantages --> */
