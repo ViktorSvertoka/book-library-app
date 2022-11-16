@@ -131,6 +131,9 @@ ul {
   text-decoration: none;
   display: block;
   color: #000000;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-header:hover,
@@ -159,6 +162,10 @@ ul {
   line-height: 1.15;
   color: var(--title-text-color);
   fill: var(--title-text-color);
+  transition-property: color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-header:hover,
@@ -483,6 +490,10 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-button:hover,
@@ -529,6 +540,10 @@ ul {
   width: 170px;
   height: 92px;
   fill: #afb1b8;
+  transition-property: border;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item-box:hover,
@@ -624,6 +639,9 @@ ul {
   line-height: 1.72;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-footer:hover,
@@ -665,6 +683,10 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition-property: background;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-in-button:hover,
@@ -725,6 +747,10 @@ ul {
   white-space: nowrap;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-property: background-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-navigation:hover,
@@ -811,6 +837,7 @@ ul {
   padding: 63px 24px;
   transform: translateY(100%);
   transition: transform 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-item:hover .gallery-position-text {
