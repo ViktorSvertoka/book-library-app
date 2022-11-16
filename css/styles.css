@@ -789,6 +789,7 @@ ul {
 
 .gallery-images-box {
   position: relative;
+  overflow: hidden;
 }
 
 .gallery-position-text {
@@ -808,4 +809,10 @@ ul {
   width: 370px;
   height: 294px;
   padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+
+.gallery-item:hover .gallery-position-text {
+  transform: translateY(0);
 }
