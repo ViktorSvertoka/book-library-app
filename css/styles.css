@@ -275,7 +275,6 @@ ul {
   margin-left: 692px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition-timing-function: ease-in; */
 }
 
 /* модальное окно */
@@ -287,11 +286,13 @@ ul {
   left: 0;
   top: 0;
   background: rgba(47, 48, 58, 0.4);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -308,8 +309,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   padding: 8px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition-timing-function: ease-in; */
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button {
@@ -326,7 +326,6 @@ ul {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition-timing-function: ease-in; */
 }
 
 .modal-icon {
@@ -866,7 +865,7 @@ ul {
   text-decoration: none;
   color: var(--primary-text-color);
   transform: translateY(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
