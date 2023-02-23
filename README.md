@@ -1,4 +1,4 @@
-**Read in other languages: [[Ukrainian](README.md), [English](README.en.md).**
+**Read in other languages: [Ukrainian](README.md), [English](README.en.md).**
 
 # Домашнє завдання № 5
 
