@@ -1,26 +1,45 @@
 const express = require('express');
 const cors = require('cors');
-const booksData = require('./data/books.json'); // Import the book data
+const { MongoClient } = require('mongodb');
+
+const url =
+  'mongodb+srv://PowerPulse:A8y0zgINSdj0KOtI@cluster0.ebe8vko.mongodb.net';
+const client = new MongoClient(url);
 
 const app = express();
 
 app.use(cors());
 
-function getRandomBook() {
+function getRandomBook(booksData) {
   const randomIndex = Math.floor(Math.random() * booksData.length);
   const randomBook = booksData[randomIndex];
   return randomBook;
 }
 
-app.get('/random-book', (req, res) => {
-  res.json(getRandomBook()); // http://localhost:4000/random-book
-});
+async function main() {
+  await client.connect();
 
-app.get('/random-book-delayed', (req, res) => {
-  setTimeout(() => {
-    res.json(getRandomBook()); // http://localhost:4000/random-book-delayed
-  }, 2000);
-});
+  const db = client.db('books');
+  const collection = db.collection('books-library');
+
+  app.get('/book', async (req, res) => {
+    try {
+      const booksData = await collection.find().toArray();
+      const randomBook = getRandomBook(booksData);
+      setTimeout(() => {
+        res.json(randomBook);
+      }, 2000);
+    } catch (error) {
+      res
+        .status(500)
+        .json({ error: 'Error retrieving data from the database' });
+    }
+  });
+
+  console.log('Connected to database.');
+}
+
+main().catch(console.error);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
